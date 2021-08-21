@@ -14,7 +14,15 @@ body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
 }
-.conteiner {
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+    background-color: transparent;}
+
+.container {
   width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;
@@ -37,16 +45,16 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style: none;
+}
+
+img
+{
+  width: 100%;
+  height: auto;
 }
 
 /* стили хедера */
-.header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
 .logo {
   font-family: Raleway;
   font-weight: 700;
@@ -54,37 +62,39 @@ ul {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  display: inline-block;
 }
 .first-part-of-logo {
   color: var(--accent-color);
 }
 
-.link {
+a {
   text-decoration: none;
   color: var(--primary-text-color);
 }
-.link:hover {
+a:hover {
   color: var(--accent-color);
 }
-.link:focus {
+a:focus {
   color: var(--accent-color);
 }
-.list {
-  list-style: none;
-}
+
 .active {
   color: var(--accent-color);
 }
-.header-conteiner {
+.header-container {
   display: flex;
   align-items: center;
-  align-content: center;
-  justify-content: space-around;
 }
 
-.nav-conteiner {
+.nav-container {
   display: flex;
   align-items: center;
+  }
+
+  .nav-container li {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
 .main-nav {
@@ -97,31 +107,44 @@ ul {
 .contacts-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
-.contacts-list > li + li {
+.contacts-item:not(:first-child){ 
   margin-left: 50px;
 }
 
-.header-contacts-list {
+.main-nav-link
+{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts-item {
+  display: block;
+  width: auto;
+}
+
+.contacts-link
+{
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   align-items: center;
-}
-
-.contacts-list-item {
-  display: block;
-  width: auto;
-}
+} 
 
 /* стили легенд */
 .legend-section {
   background-color: #2f303a;
   padding: 200px 0px;
-}
+  }
 .main-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -131,11 +154,14 @@ ul {
   color: #ffffff;
   margin-bottom: 40px;
 }
-
+.order-button
+{
+  display: block;
+}
 .order-button {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.6;
   display: flex;
   align-items: center;
   text-align: center;
@@ -145,6 +171,10 @@ ul {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px 32px;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
 }
 
 /* стили принципы работы */
@@ -170,6 +200,7 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin-top: 10px;
 }
 .about-us-list {
   display: flex;
@@ -178,10 +209,15 @@ ul {
   margin-left: 30px;
 }
 .about-us-item {
-  width: 300px;
+  width: 270px;
 }
 
 /* секция Чем мы занимаемся*/
+
+.worcks-section
+{
+  padding-top: 0;
+}
 
 .section-title {
   font-weight: 700;
@@ -190,12 +226,13 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  margin-bottom: 50px;
 }
-.worck-exemple-list {
+.work-exemple-list {
   display: flex;
   flex-basis: calc(100% / 3);
 }
-.worck-exemple-item:not(:first-child){
+.work-exemple-item:not(:first-child){
   margin-left: 30px;
 }
 
@@ -205,6 +242,7 @@ ul {
 }
 .our-team-list {
   display: flex;
+  margin-top: 50px;
 }
 
 .team-member-item:not(:first-child){
@@ -218,6 +256,17 @@ ul {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+
+.our-team-list img
+{
+  padding-bottom: 30px;
+}
+
+.team-member-text
+{
+padding-bottom: 30px;;
+}
+
 .members-profile {
   font-size: 16px;
   line-height: 1.9;
@@ -225,11 +274,11 @@ ul {
   letter-spacing: 0.03em;
   color: #757575;
 }
-.team-member {
-  text-decoration: none;
-}
-.members-profile {
-  text-decoration: none;
+
+.team-member-item
+{
+background-color: #ffffff;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 /* футер */
 .footers-contacts {
@@ -249,16 +298,22 @@ ul {
 }
 .footer {
   background-color: #2f303a;
+  padding: 60px 0;
 }
-.footer-content {
-  padding-top: 60px;
-  padding-bottom: 60px;
+
 }
 .footer-logo-second-part {
   color: #ffffff;
 }
 .footer-logo {
-  padding-bottom: 20px;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color:  #ffffff;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 .footer-link 
 {
@@ -271,10 +326,9 @@ ul {
   font-style: normal;
   }
 
-.footer-contacts-item{
-  padding-bottom:not(:nth-last-child) 9px;
+.footer-contacts-list:not(:last-child){
+    padding-bottom:9px;
 }
-
   .location {
   font-size: 14px;
   line-height: 1.71;
@@ -289,7 +343,7 @@ ul {
 }
 
 /* стили портфолио */
-.filtr-button {
+.filter-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -297,24 +351,32 @@ ul {
   letter-spacing: 0.03em;
   color: #212121;
   cursor: pointer;
-  radius: 4px;
-  }
+  background: #F5F4FA;
+  border-radius: 4px;
+  padding: 6px 22px;
+ }
+ 
+.active-nav
+{
+  background-color: var(--accent-color);
+  color: #ffffff
+}
+
+.filter-button:hover {
+  border-color:  var(--accent-color);
+}
+.filter-button:focus {
   
-.filtr-button:hover {
-  color: #ffffff;
-  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
-.filtr-button:focus {
-  color: #ffffff;
-  background-color: var(--accent-color);
-}
+
 
 .nav-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.filtr-item:not(:first-child){
+.filter-item:not(:first-child){
   margin-left: 8px;}
 
   .projects-galery-list{
@@ -332,7 +394,7 @@ ul {
   }
 .type-of-project {
   font-size: 16px;
-  line-height: 1.87px;
+  line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   margin-top: 4px;
@@ -350,6 +412,7 @@ ul {
 
  .projects-galery-item:nth-child(3n){
   margin-right: 0px;
+  border: 1px solid #EEEEEE;
 }
 .projects-galery-item:nth-last-child(-n + 3){
   margin-bottom: 0px;

@@ -23,38 +23,40 @@
   <body>
     <!--верхняя линия-->
     <header class="header">
-      <div class="header-conteiner  conteiner">
-        <nav class="nav-conteiner">
-          <a href="/" class="logo link"
+      <div class="header-container container">
+        <nav class="nav-container">
+          <a href="/" class="logo main-nav-item"
             ><span class="first-part-of-logo">Web</span>Studio</a
           >
-          <ul class="main-nav list header-conteiner-list">
-            <li class="main-nav-item header-item">
-              <a href="" class="link active">Студия</a>
+          <ul class="main-nav header-container-list">
+            <li class="main-nav-item">
+              <a href="" class="main-nav-link active">Студия</a>
             </li>
-            <li class="main-nav-item header-item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
+            <li class="main-nav-item">
+              <a href="./portfolio.html" class="main-nav-link">Портфолио</a>
             </li>
-            <li class="main-nav-item header-item">
-              <a href="" class="link">Контакты</a>
+            <li class="main-nav-item">
+              <a href="" class="main-nav-link">Контакты</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts-list list header-contacts-list">
-          <li class="contacts-list-item ">
-            <a href="mailto:info@devstudio.com" class="link"
+        <ul class="contacts-list">
+          <li class="contacts-item">
+            <a href="mailto:info@devstudio.com" class="contacts-link"
               >info@devstudio.com</a
             >
           </li>
-          <li class="contacts-list-item">
-            <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+          <li class="contacts-item">
+            <a href="tel:+380961111111" class="contacts-link"
+              >+38 096 111 11 11</a
+            >
           </li>
         </ul>
       </div>
     </header>
     <!--шапка-->
     <main>
-      <section class="legend-section section">
+      <section class="legend-section">
         <h1 class="main-title">
           Эффективные решения для вашего бизнеса
         </h1>
@@ -62,9 +64,9 @@
       </section>
       <!--принципы работы-->
       <section class="section about-us">
-        <div class="conteiner">
+        <div class="container">
           <h2 class="about-us-tite-main visually-hidden">принципы работы</h2>
-          <ul class="list about-us-list">
+          <ul class="about-us-list">
             <li class="about-us-item">
               <h3 class="about-us-title">Внимание к деталям</h3>
               <p class="about-us-text">
@@ -98,11 +100,11 @@
       </section>
 
       <!--Чем мы занимаемся -->
-      <section class="section worck-exemple-conteiner">
-        <div class="conteiner">
+      <section class="section worcks-section">
+        <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
-          <ul class="list worck-exemple-list">
-            <li class="worck-exemple-item">
+          <ul class="work-exemple-list">
+            <li class="work-exemple-item">
               <img
                 src="./images/img0.jpg"
                 alt="рабочий стол, взаимодействие с код"
@@ -110,7 +112,7 @@
                 height="294"
               />
             </li>
-            <li class="worck-exemple-item">
+            <li class="work-exemple-item">
               <img
                 src="./images/img1.jpg"
                 alt="разработка мобильной версии"
@@ -118,7 +120,7 @@
                 height="294"
               />
             </li>
-            <li class="worck-exemple-item">
+            <li class="work-exemple-item">
               <img
                 src="./images/img2.jpg"
                 alt="разработка дизайна"
@@ -132,79 +134,79 @@
 
       <!--Наша команда-->
       <section class="section section-our-team">
-        <div class="conteiner">
+        <div class="container">
           <h2 class="section-title">Наша команда</h2>
-          <ul class="list our-team-list">
+          <ul class="our-team-list">
             <li class="team-member-item">
-              <a class="link" href=""
-                ><img
-                  src="./images/img3.jpg"
-                  alt="сотрудник1"
-                  width="270"
-                  height="260"
-                />
+              <img
+                src="./images/img3.jpg"
+                alt="сотрудник1"
+                width="270"
+                height="260"
+              />
+              <div class="team-member-text">
                 <h3 class="team-member-title">Игорь Демьяненко</h3>
-                <p class="members-profile">Product Designer</p></a
-              >
+                <p class="members-profile">Product Designer</p>
+              </div>
             </li>
             <li class="team-member-item">
-              <a class="link" href=""
-                ><img
-                  src="./images/img4.jpg"
-                  alt="сотрудник2"
-                  width="270"
-                  height="260"
-                />
+              <img
+                src="./images/img4.jpg"
+                alt="сотрудник2"
+                width="270"
+                height="260"
+              />
+              <div class="team-member-text">
                 <h3 class="team-member-title">Ольга Репина</h3>
-                <p class="members-profile">Frontend Developer</p></a
-              >
+                <p class="members-profile">Frontend Developer</p>
+              </div>
             </li>
             <li class="team-member-item">
-              <a class="link" href=""
-                ><img
-                  src="./images/img5.jpg"
-                  alt="сотрудник3"
-                  width="270"
-                  height="260"
-                />
+              <img
+                src="./images/img5.jpg"
+                alt="сотрудник3"
+                width="270"
+                height="260"
+              />
+              <div class="team-member-text">
                 <h3 class="team-member-title">Николай Тарасов</h3>
-                <p class="members-profile">Marketing</p></a
-              >
+                <p class="members-profile">Marketing</p>
+              </div>
             </li>
             <li class="team-member-item">
-              <a class="link" href=""
-                ><img
-                  src="./images/img6.jpg"
-                  alt="сотрудник4"
-                  width="270"
-                  height="260"
-                />
+              <img
+                src="./images/img6.jpg"
+                alt="сотрудник4"
+                width="270"
+                height="260"
+              />
+              <div class="team-member-text">
                 <h3 class="team-member-title">Михаил Ермаков</h3>
-                <p class="members-profile">UI Designer</p></a
-              >
+                <p class="members-profile">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <footer class="footer conteiner">
-      <div class="footer-content">
-        <a href="/" class="logo link"
+    <footer class="footer">
+      <div class="container">
+        <a href="/" class="footer-logo"
           ><span class="first-part-of-logo">Web</span
           ><span class="footer-logo-second-part">Studio</span></a
         >
         <address class="footer-contacts">
-          <ul class="list">
-            <li class="location">г. Киев, пр-т Леси Украинки, 26</li>
+          <ul class="footer-contacts-list">
+            <li class="location footer-contacts-item">
+              Киев, пр-т Леси Украинки, 26
+            </li>
             <li class="footer-contacts-item">
-              <a
-                href="mailto:info@example.com"
-                class="footer-contacts-link link"
+              <a href="mailto:info@example.com" class="footer-contacts-link"
                 >info@example.com</a
               >
             </li>
             <li class="footer-contacts-item">
-              <a href="tel:+380961111111" class="footer-contacts-link link"
+              <a href="tel:+380961111111" class="footer-contacts-link"
                 >+38 096 111 11 11</a
               >
             </li>
