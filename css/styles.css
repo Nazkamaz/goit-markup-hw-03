@@ -8,6 +8,7 @@
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
+  --background-color: #ffffff;
 }
 body {
   background-color: #ffffff;
@@ -20,7 +21,7 @@ button {
   border: none;
   font: inherit;
   color: inherit;
-    background-color: transparent;}
+  background-color: transparent;}
 
 .container {
   width: 1200px;
